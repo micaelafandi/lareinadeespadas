@@ -1,0 +1,1143 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+/*grid*/
+@media screen and (min-width: 400px) {
+body {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 150px 500px 70px 700px 200px;
+    grid-template-areas: 
+    "header header header"
+    "carrusel carrusel carrusel"
+    "submenu submenu submenu"
+    "productos productos productos"
+    "footer footer footer";
+    grid-row-gap: 10px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    grid-template-rows: 2fr;
+    background-color: white;
+    grid-area: header;
+    grid-column-gap: 20px;
+    margin: 10px;
+}
+
+.carrusel {
+    display: grid;
+    grid-template-columns: 7fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    grid-area: carrusel;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    grid-area: submenu;
+}
+
+section#productos {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: repeat (3 2fr);
+    background-color: white;
+    grid-area: productos;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 2fr;
+    grid-area: footer;
+    background-color: #CAACF9;
+}
+
+
+/*header*/
+header {
+    align-items: center;
+}
+/*imagenes del header*/ 
+header img {
+    height: 25px;
+    width: 25px;
+}
+
+/*efectos hover usuario*/
+
+nav#usuario a {
+    background-color: white;
+    text-align: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+}
+
+nav#usuario a:hover {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transition:all .2s ease;
+    -webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    z-index: 5;
+}
+nav#usuario img a {
+    color: #CAACF9;
+    display: flex;
+    border-bottom: 40px solid #CAACF9;
+    padding-bottom: 10px 10px 10px 10px;
+    background-color: white;
+    line-height: 10px;
+    border-radius: 20px;
+    border-image: 40px;
+    white-space: nowrap;
+    
+  }
+nav#usuario a:hover {
+    background-color: #CAACF9;
+}
+/*logo*/
+
+nav#logo img {
+    height: 125px;
+    width: 125px;
+}
+/*formatos del header*/
+nav#usuario ul li img {
+    padding: 10px;
+    list-style: none;
+}
+section#menu_horizontal ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: #CAACF9;
+    justify-content: space-evenly;
+    -ms-flex-align: baseline;
+    padding: 10px;
+    align-items: center;
+    
+
+}
+
+/*fuentes del header*/
+
+header li a {
+    font-size: 22px;
+    color: black;
+    font-style: normal;
+    font-family: "staatliches";
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+    text-decoration: none;
+    align-items: center;
+}
+/*hover menu horizontal*/ 
+section#menu_horizontal a:hover {
+    color: white
+}
+section#menu_horizontal a {
+    position: relative;
+  }
+section#menu_horizontal a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+section#menu_horizontal a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+/*carrusel de imagenes*/
+
+.carrusel img {
+    height: 410px;
+    width: 1240px;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+}
+.carrusel1 img {
+    visibility: visible;
+}
+.carrusel2 img {
+    visibility: hidden;
+}
+
+/*formatos del sub menu*/
+nav#sub_menu {
+    margin: 10px;
+    align-content: center;
+}
+
+nav#sub_menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 22px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    padding: 10px;
+
+}
+
+nav#sub_menu li a {
+    text-decoration: none; 
+    color: black;
+    align-items: center;
+    background-color: #CAACF9;
+    padding: 10px 20px 10px 20px;   
+}
+
+/*sub_menu fijo mientras se haga scroll*/ 
+
+
+/*hover sub_menu*/ 
+nav#sub_menu a:hover {
+    color: white
+}
+nav#sub_menu a {
+    position: relative;
+  }
+nav#sub_menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+nav#sub_menu a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/*sección productos*/
+
+
+section#productos {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    grid-row-gap: 5px;
+    justify-content: space-between;
+}
+
+/*formato columna1*/
+
+div.producto1  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.producto1 a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    text-decoration: none;
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+}
+div.producto1 a {
+    box-shadow: inset 0 0 0 0 #CAACF9;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div.producto1  a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #CAACF9;;
+  }
+div.producto1 p {
+    display: flex;
+    flex-wrap: wrap;
+    color: #CAACF9;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 700;
+}
+
+div.producto4  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.producto4 a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    text-decoration: none;
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+}
+div.producto4 a {
+    box-shadow: inset 0 0 0 0 #CAACF9;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div.producto4  a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #CAACF9;;
+  }
+div.producto4 p {
+    display: flex;
+    flex-wrap: wrap;
+    color: #CAACF9;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 700;
+}
+
+/*formato columna 2*/
+
+div.producto2  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.producto2 a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    text-decoration: none;
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+}
+div.producto2 a {
+    box-shadow: inset 0 0 0 0 #CAACF9;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div.producto2  a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #CAACF9;;
+  }
+div.producto2 p {
+    display: flex;
+    flex-wrap: wrap;
+    color: #CAACF9;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 700;
+}
+
+div.producto5  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.producto5 a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    text-decoration: none;
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+}
+
+div.producto5 a {
+    box-shadow: inset 0 0 0 0 #CAACF9;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div.producto5  a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #CAACF9;;
+  }
+div.producto5 p {
+    display: flex;
+    flex-wrap: wrap;
+    color: #CAACF9;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 700;
+}
+
+/*formato columna3*/
+
+div.producto3  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.producto3 a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    text-decoration: none;
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+}
+div.producto3 a {
+    box-shadow: inset 0 0 0 0 #CAACF9;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div.producto3  a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #CAACF9;;
+  }
+div.producto3 p {
+    display: flex;
+    flex-wrap: wrap;
+    color: #CAACF9;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 700;
+}
+
+div.producto6  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.producto6 a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    text-decoration: none;
+    padding: 15px 0px 10px 0px;
+    font-size: 25px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+}
+
+div.producto6 a {
+    box-shadow: inset 0 0 0 0 #CAACF9;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div.producto6  a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #CAACF9;;
+  }
+div.producto6 p {
+    display: flex;
+    flex-wrap: wrap;
+    color: #CAACF9;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 700;
+}
+
+/*hover de productos*/
+
+
+/*footer*/
+
+footer {
+    align-items: baseline;
+    display: grid;
+    grid-template-columns: 6;
+}
+/*sección redes sociales*/ 
+
+
+div#redes-sociales {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 20px 0px 0px 20px;
+}
+
+div#redes-sociales img {
+    width: 40px;
+    height: 40px;
+}
+
+div.youtube {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+
+div.twitter {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+
+div.telegram {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+div.spotify {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+div.instagram {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+
+/*seccion información*/
+
+div#informacion {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-content: initial;
+}
+
+div#informacion li  {
+    display: flex;
+    list-style: none;
+    color: black;
+    font-size: 22px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+div#informacion a {
+    text-decoration: none;
+    color: black;
+}
+/*hover información*/ 
+
+div#informacion  a {
+    box-shadow: inset 0 0 0 0 white;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div#informacion a:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 white;
+}
+}
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 400px) {
+    body {
+        background-color: white;
+        display: grid;
+        grid-template-rows: 150px 330px 70px 650px 150px;
+        grid-template-areas: 
+        "header header header"
+        "carrusel carrusel carrusel"
+        "submenu submenu submenu"
+        "productos productos productos"
+        "footer footer footer";
+        grid-row-gap: 5px;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+        grid-template-rows: 1fr;
+        background-color: white;
+        grid-area: header;
+        grid-column-gap: 20px;
+        margin: 10px;
+      
+    }
+    
+    /*header*/
+header {
+    align-items: center;
+    max-width: 1030px;
+    margin-right: 10px;
+}
+/*imagenes del header*/ 
+header img {
+    height: 25px;
+    width: 25px;
+}
+
+/*efectos hover usuario*/
+
+nav#usuario a {
+    background-color: white;
+    text-align: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+}
+
+nav#usuario a:hover {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transition:all .2s ease;
+    -webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    z-index: 5;
+}
+nav#usuario img a {
+    color: #CAACF9;
+    display: flex;
+    border-bottom: 40px solid #CAACF9;
+    padding-bottom: 10px 10px 10px 10px;
+    background-color: white;
+    line-height: 10px;
+    border-radius: 20px;
+    border-image: 40px;
+    white-space: nowrap;
+    
+  }
+nav#usuario a:hover {
+    background-color: #CAACF9;
+}
+/*logo*/
+
+nav#logo img {
+    height: 125px;
+    width: 125px;
+}
+/*formatos del header*/
+nav#usuario ul li img {
+    padding: 10px;
+    list-style: none;
+}
+section#menu_horizontal ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: #CAACF9;
+    justify-content: space-evenly;
+    -ms-flex-align: baseline;
+    padding: 10px;
+    align-items: center;
+    
+
+}
+
+/*fuentes del header*/
+
+header li a {
+    font-size: 22px;
+    color: black;
+    font-style: normal;
+    font-family: "staatliches";
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+    text-decoration: none;
+    align-items: center;
+}
+/*hover menu horizontal*/ 
+section#menu_horizontal a:hover {
+    color: white
+}
+section#menu_horizontal a {
+    position: relative;
+  }
+section#menu_horizontal a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+section#menu_horizontal a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+    .carrusel {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-color: white;
+        grid-area: carrusel;
+        margin: 10px;
+    }
+    .carrusel img {
+        height: 310px;
+        width: 930px;
+        align-items: center;
+        display: flex;
+    }
+    .carrusel1 img {
+        visibility: visible;
+    }
+    .carrusel2 img {
+        visibility: hidden;
+    }
+    
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-color: white;
+        grid-area: submenu;
+        margin: 10px;
+    }
+    
+    /*formatos del sub menu*/
+nav#sub_menu {
+    align-content: center;
+    max-width: 1030px;
+}
+
+nav#sub_menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 22px;
+    font-family: staatliches;
+    src: url(recursos/Staatliches-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    padding: 10px;
+
+}
+
+nav#sub_menu li a {
+    text-decoration: none; 
+    color: black;
+    align-items: center;
+    background-color: #CAACF9;
+    padding: 10px 10px 10px 10px;   
+}
+
+
+    section#productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        background-color: white;
+        grid-area: productos;
+        margin: 10px;
+    }
+
+    section#productos {
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 2;
+        grid-row-gap: 5px;
+        justify-content: space-between;
+    }
+    
+    /*formato columna1*/
+    
+    div.producto1  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    div.producto1 a {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        text-decoration: none;
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        font-family: staatliches;
+        src: url(recursos/Staatliches-Regular.ttf);
+        font-weight: 400;
+    }
+    div.producto1 a {
+        box-shadow: inset 0 0 0 0 #CAACF9;
+        color: black;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+    div.producto1  a:hover {
+        color: white;
+        box-shadow: inset 400px 0 0 0 #CAACF9;;
+      }
+    div.producto1 p {
+        display: flex;
+        flex-wrap: wrap;
+        color: #CAACF9;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        src: url(recursos/Kanit-ThinItalic.ttf);
+        font-weight: 700;
+    }
+    
+    div.producto4  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.producto4 a {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        text-decoration: none;
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        font-family: staatliches;
+        src: url(recursos/Staatliches-Regular.ttf);
+        font-weight: 400;
+    }
+    div.producto4 a {
+        box-shadow: inset 0 0 0 0 #CAACF9;
+        color: black;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+    div.producto4  a:hover {
+        color: white;
+        box-shadow: inset 400px 0 0 0 #CAACF9;;
+      }
+    div.producto4 p {
+        display: flex;
+        flex-wrap: wrap;
+        color: #CAACF9;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        src: url(recursos/Kanit-ThinItalic.ttf);
+        font-weight: 700;
+    }
+    
+    /*formato columna 2*/
+    
+    div.producto2  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    div.producto2 a {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        text-decoration: none;
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        font-family: staatliches;
+        src: url(recursos/Staatliches-Regular.ttf);
+        font-weight: 400;
+    }
+    div.producto2 a {
+        box-shadow: inset 0 0 0 0 #CAACF9;
+        color: black;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+    div.producto2  a:hover {
+        color: white;
+        box-shadow: inset 400px 0 0 0 #CAACF9;;
+      }
+    div.producto2 p {
+        display: flex;
+        flex-wrap: wrap;
+        color: #CAACF9;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        src: url(recursos/Kanit-ThinItalic.ttf);
+        font-weight: 700;
+    }
+    
+    div.producto5  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        visibility: hidden;
+    }
+    
+    div.producto5 a {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        text-decoration: none;
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        font-family: staatliches;
+        src: url(recursos/Staatliches-Regular.ttf);
+        font-weight: 400;
+    }
+    
+    div.producto5 a {
+        box-shadow: inset 0 0 0 0 #CAACF9;
+        color: black;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+    div.producto5  a:hover {
+        color: white;
+        box-shadow: inset 400px 0 0 0 #CAACF9;;
+      }
+    div.producto5 p {
+        display: flex;
+        flex-wrap: wrap;
+        color: #CAACF9;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        src: url(recursos/Kanit-ThinItalic.ttf);
+        font-weight: 700;
+    }
+    
+    /*formato columna3*/
+    
+    div.producto3  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    div.producto3 a {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        text-decoration: none;
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        font-family: staatliches;
+        src: url(recursos/Staatliches-Regular.ttf);
+        font-weight: 400;
+    }
+    div.producto3 a {
+        box-shadow: inset 0 0 0 0 #CAACF9;
+        color: black;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+    div.producto3  a:hover {
+        color: white;
+        box-shadow: inset 400px 0 0 0 #CAACF9;;
+      }
+    div.producto3 p {
+        display: flex;
+        flex-wrap: wrap;
+        color: #CAACF9;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        src: url(recursos/Kanit-ThinItalic.ttf);
+        font-weight: 700;
+    }
+    
+    div.producto6  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        visibility: hidden;
+    }
+    
+    div.producto6 a {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        text-decoration: none;
+        padding: 15px 0px 10px 0px;
+        font-size: 25px;
+        font-family: staatliches;
+        src: url(recursos/Staatliches-Regular.ttf);
+        font-weight: 400;
+    }
+    
+    div.producto6 a {
+        box-shadow: inset 0 0 0 0 #CAACF9;
+        color: black;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+    div.producto6  a:hover {
+        color: white;
+        box-shadow: inset 400px 0 0 0 #CAACF9;;
+      }
+    div.producto6 p {
+        display: flex;
+        flex-wrap: wrap;
+        color: #CAACF9;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 20px;
+        src: url(recursos/Kanit-ThinItalic.ttf);
+        font-weight: 700;
+    }
+
+
+    footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-area: footer;
+        background-color: #CAACF9;
+        margin: 10px;
+    }   
+    /*footer*/
+
+footer {
+    align-items: baseline;
+    display: grid;
+    grid-template-columns: 6;
+}
+/*sección redes sociales*/ 
+
+
+div#redes-sociales {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 20px 0px 0px 20px;
+}
+
+div#redes-sociales img {
+    width: 40px;
+    height: 40px;
+}
+
+div.youtube {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+
+div.twitter {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+
+div.telegram {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+div.spotify {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+div.instagram {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+
+/*seccion información*/
+
+div#informacion {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-content: center;
+    max-width: 100px;
+}
+
+div#informacion li  {
+    display: flex;
+    list-style: none;
+    color: black;
+    font-size: 22px;
+    src: url(recursos/Kanit-ThinItalic.ttf);
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+div#informacion a {
+    text-decoration: none;
+    color: black;
+    justify-items:  right;
+}
+/*hover información*/ 
+
+div#informacion  a {
+    box-shadow: inset 0 0 0 0 white;
+    color: black;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+div#informacion a:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 white;
+}
+    
+
+}
